@@ -26,6 +26,8 @@ Selected work:
 
 The page also lists Deepfake Audio Detection, Pharmacy Management System, MindScribe (in development), AgentForge and Student Performance Analysis.
 
+Live demo: [Student Performance Analysis](https://laya-student-performance.streamlit.app/).
+
 The project visuals are decorative illustrations, not application screenshots. The portrait area is reserved for a personal photo.
 
 ## Built with
@@ -65,13 +67,3 @@ portfolio/
 The earlier pages remain in the repository, but the current homepage navigates between sections of `index.html`.
 
 ## Customize
-
-Edit `index.html` to update:
-
-- Project names, descriptions, status labels and repository links.
-- Skills, internships and About text.
-- GitHub and LinkedIn links in the Connect section.
-- Colours and layout in the inline `<style>` block.
-- Animations in the CSS and the inline script near the end of the file.
-
-The current Connect section links to social profiles; it does not contain a contact form. The older `contact.html` form has no message-delivery backend.
