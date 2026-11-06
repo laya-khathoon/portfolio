@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laya Khathoon | Portfolio</title><meta name="description" content="B.Tech Computer Science student building machine learning and AI projects."><style>html,body{margin:0;scroll-behavior:smooth}body{background:#f3ebe3}.pf{--cream:#f3ebe3;--ink:#161616;--tan:#c9b5a3;--gold:#c9b18a;--dk:#242321;--mut:#5b554f;
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laya Khathoon | Portfolio</title><script>document.documentElement.classList.add("js")</script><meta name="description" content="B.Tech Computer Science student building machine learning and AI projects."><style>html,body{margin:0;scroll-behavior:smooth}body{background:#f3ebe3}.pf{--cream:#f3ebe3;--ink:#161616;--tan:#c9b5a3;--gold:#c9b18a;--dk:#242321;--mut:#5b554f;
 background:var(--cream);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.5;
 .wrap{max-width:1000px;margin:auto;background:var(--cream)}
 .dark{background:var(--dk);color:#efe6dc}
@@ -52,7 +52,37 @@ ul,ol{padding:0;margin:0}.hero{position:relative}.htext{position:relative;z-inde
 html{scroll-behavior:smooth}
 .htext{min-width:0}
 .btns{display:flex;gap:10px;flex-wrap:wrap}.ph{border-style:solid;border-color:#b8a592;opacity:.8}
-}.pf section{scroll-margin-top:10px}.pf a:focus-visible{outline:2px solid #c9b18a;outline-offset:3px}.pf .dark a:focus-visible{outline-color:#f3ebe3}@media(prefers-reduced-motion:reduce){html,body{scroll-behavior:auto}}</style></head><body><div class="pf"><div class="wrap">
+}.pf section{scroll-margin-top:10px}.pf a:focus-visible{outline:2px solid #c9b18a;outline-offset:3px}.pf .dark a:focus-visible{outline-color:#f3ebe3}@media(prefers-reduced-motion:reduce){html,body{scroll-behavior:auto}}
+/* === Motion layer === */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes discin{from{opacity:0;transform:scale(.85)}to{opacity:.6;transform:scale(1)}}
+@keyframes phin{from{opacity:0;transform:translateY(26px)}to{opacity:.8;transform:none}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.js .hero .ital,.js .hero h1,.js .hero .rule,.js .hero .tag,.js .hero .body,.js .hero .sig{opacity:0;animation:rise .7s cubic-bezier(.22,1,.36,1) forwards}
+.js .hero .ital{animation-delay:.05s}.js .hero h1{animation-delay:.18s}.js .hero .rule{animation-delay:.32s}
+.js .hero .tag{animation-delay:.42s}.js .hero .body{animation-delay:.52s}.js .hero .sig{animation-delay:.62s}
+.js .portrait .disc{opacity:0;animation:discin .9s cubic-bezier(.22,1,.36,1) .4s forwards}
+.js .portrait .ph{opacity:0;animation:phin .8s cubic-bezier(.22,1,.36,1) .6s forwards}
+.mq{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:12px 0;background:var(--cream)}
+.mq-track{display:flex;align-items:center;gap:2.4rem;width:max-content;animation:mq 30s linear infinite}
+.mq-track span{font-size:12px;letter-spacing:.22em;white-space:nowrap}
+.mq-track i{font-style:normal;color:var(--gold);font-size:11px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,1,.36,1) var(--rd,0s),transform .6s cubic-bezier(.22,1,.36,1) var(--rd,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.in.wc{transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s}
+.js .rv.in.il{transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.wc:hover{border-color:var(--gold);transform:translateY(-4px)}
+.il:hover{transform:translateY(-3px)}
+.btn{transition:background-color .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--cream)}
+.wc a{transition:letter-spacing .3s}.wc a:hover{letter-spacing:.25em}
+@media(prefers-reduced-motion:reduce){
+.js .hero .ital,.js .hero h1,.js .hero .rule,.js .hero .tag,.js .hero .body,.js .hero .sig,.js .portrait .disc,.js .portrait .ph{animation:none;opacity:1}
+.js .portrait .disc{opacity:.6}.js .portrait .ph{opacity:.8}
+.js .rv{opacity:1;transform:none;transition:none}
+.mq-track{animation:none}
+.wc,.il,.btn,.wc a{transition:none}}
+</style></head><body><div class="pf"><div class="wrap">
 <header class="top"><div class="mono" aria-hidden="true">L</div><span class="nm">LAYA KHATHOON</span><nav class="role" aria-label="Sections"><a href="#pf-work">WORK</a><a href="#pf-skills">EXPERTISE</a><a href="#pf-about">ABOUT</a><a href="#pf-connect">CONNECT</a></nav></header>
 <main>
 <section class="hero">
@@ -67,33 +97,39 @@ html{scroll-behavior:smooth}
 <div class="portrait"><div class="disc" aria-hidden="true"></div><div class="ph" aria-hidden="true"></div></div>
 </section>
 
-<section class="dark work" id="pf-work"><div class="sh"><h2>SELECTED WORK</h2><hr><a href="https://github.com/laya-khathoon">ALL ON GITHUB &rarr;</a></div>
+<div class="mq" aria-hidden="true"><div class="mq-track"><span>MACHINE LEARNING</span><i>&#10022;</i><span>PYTHON</span><i>&#10022;</i><span>XGBOOST</span><i>&#10022;</i><span>RAG</span><i>&#10022;</i><span>AI AGENTS</span><i>&#10022;</i><span>NEURAL NETWORKS</span><i>&#10022;</i><span>STREAMLIT</span><i>&#10022;</i><span>FASTAPI</span><i>&#10022;</i><span>SCIKIT-LEARN</span><i>&#10022;</i><span>DEEPFAKE DETECTION</span><i>&#10022;</i><span>MACHINE LEARNING</span><i>&#10022;</i><span>PYTHON</span><i>&#10022;</i><span>XGBOOST</span><i>&#10022;</i><span>RAG</span><i>&#10022;</i><span>AI AGENTS</span><i>&#10022;</i><span>NEURAL NETWORKS</span><i>&#10022;</i><span>STREAMLIT</span><i>&#10022;</i><span>FASTAPI</span><i>&#10022;</i><span>SCIKIT-LEARN</span><i>&#10022;</i><span>DEEPFAKE DETECTION</span><i>&#10022;</i></div></div>
+<section class="dark work" id="pf-work"><div class="sh rv"><h2>SELECTED WORK</h2><hr><a href="https://github.com/laya-khathoon">ALL ON GITHUB &rarr;</a></div>
 <div class="cards3">
-<article class="wc"><span class="n">01</span><h3>CUSTOMER CHURN PREDICTION</h3><p class="k">Machine learning &middot; Streamlit app</p><div aria-hidden="true" class="art a1"><b></b><b></b><b></b><b></b><b></b><b></b></div><p class="d">Predicts whether a telecom customer will leave, comparing several classifiers including XGBoost.</p><a href="https://github.com/laya-khathoon/customer-churn-prediction" aria-label="View Customer Churn Prediction code on GitHub">VIEW CODE &rarr;</a></article>
-<article class="wc"><span class="n">02</span><h3>RAG DOCUMENTATION CHATBOT</h3><p class="k">In progress &middot; FastAPI + React</p><div aria-hidden="true" class="art a2"><u></u><u></u><u></u></div><p class="d">Answers questions from uploaded PDFs using retrieval. Retrieval is still being tested.</p><a href="https://github.com/laya-khathoon/rag-documentation-chatbot" aria-label="View RAG Documentation Chatbot code on GitHub">VIEW CODE &rarr;</a></article>
-<article class="wc"><span class="n">03</span><h3>NEURAL NETWORK FROM SCRATCH</h3><p class="k">Python &middot; NumPy only</p><div aria-hidden="true" class="art a3"><s></s><s></s><s></s><s></s></div><p class="d">Forward and backward propagation and gradient descent without a deep learning framework.</p><a href="https://github.com/laya-khathoon/NeuralNetwork" aria-label="View Neural Network from Scratch code on GitHub">VIEW CODE &rarr;</a></article>
+<article class="wc rv" style="--rd:0.00s"><span class="n">01</span><h3>CUSTOMER CHURN PREDICTION</h3><p class="k">Machine learning &middot; Streamlit app</p><div aria-hidden="true" class="art a1"><b></b><b></b><b></b><b></b><b></b><b></b></div><p class="d">Predicts whether a telecom customer will leave, comparing several classifiers including XGBoost.</p><a href="https://github.com/laya-khathoon/customer-churn-prediction" aria-label="View Customer Churn Prediction code on GitHub">VIEW CODE &rarr;</a></article>
+<article class="wc rv" style="--rd:0.08s"><span class="n">02</span><h3>RAG DOCUMENTATION CHATBOT</h3><p class="k">In progress &middot; FastAPI + React</p><div aria-hidden="true" class="art a2"><u></u><u></u><u></u></div><p class="d">Answers questions from uploaded PDFs using retrieval. Retrieval is still being tested.</p><a href="https://github.com/laya-khathoon/rag-documentation-chatbot" aria-label="View RAG Documentation Chatbot code on GitHub">VIEW CODE &rarr;</a></article>
+<article class="wc rv" style="--rd:0.16s"><span class="n">03</span><h3>NEURAL NETWORK FROM SCRATCH</h3><p class="k">Python &middot; NumPy only</p><div aria-hidden="true" class="art a3"><s></s><s></s><s></s><s></s></div><p class="d">Forward and backward propagation and gradient descent without a deep learning framework.</p><a href="https://github.com/laya-khathoon/NeuralNetwork" aria-label="View Neural Network from Scratch code on GitHub">VIEW CODE &rarr;</a></article>
 </div>
-<div class="more"><h3 class="moreh">MORE</h3>
+<div class="more rv"><h3 class="moreh">MORE</h3>
 <ul><li><b>Deepfake Audio Detection</b><span>A machine learning project for identifying AI-generated and deepfake audio.</span></li><li><b>Pharmacy Management System</b><span>A mini project that computerizes common pharmacy tasks.</span></li><li><b>MindScribe</b><span>In development: records voice notes, transcribes with a Whisper model, searchable notes &middot; <a href="https://github.com/laya-khathoon/MindScribe" aria-label="MindScribe code on GitHub">code</a></span></li><li><b>AgentForge</b><span>Local AI agent &middot; <a href="https://github.com/laya-khathoon/AgentForge" aria-label="AgentForge code on GitHub">code</a></span></li><li><b>Student Performance Analysis</b><span>ML &middot; <a href="https://github.com/laya-khathoon/StudentPerformanceAnalysis" aria-label="Student Performance Analysis code on GitHub">code</a></span></li></ul></div>
 </section>
 
 <section class="skills" id="pf-skills">
 <div class="exp"><h2>EXPERTISE</h2>
-<ul><li><span class="ic" aria-hidden="true">&#9881;</span><div><b>MACHINE LEARNING</b><p>scikit-learn, XGBoost, model evaluation.</p></div></li>
-<li><span class="ic" aria-hidden="true">&#9638;</span><div><b>NEURAL NETWORKS</b><p>NumPy implementation of backpropagation.</p></div></li>
-<li><span class="ic" aria-hidden="true">&#9674;</span><div><b>RAG &amp; AI AGENTS</b><p>FastAPI, LangChain, ChromaDB, Python.</p></div></li>
-<li><span class="ic" aria-hidden="true">&lt;/&gt;</span><div><b>WEB &amp; PROGRAMMING</b><p>C, Java, Python, HTML, CSS, JavaScript, React.</p></div></li></ul></div>
+<ul><li class="rv" style="--rd:0.00s"><span class="ic" aria-hidden="true">&#9881;</span><div><b>MACHINE LEARNING</b><p>scikit-learn, XGBoost, model evaluation.</p></div></li>
+<li class="rv" style="--rd:0.07s"><span class="ic" aria-hidden="true">&#9638;</span><div><b>NEURAL NETWORKS</b><p>NumPy implementation of backpropagation.</p></div></li>
+<li class="rv" style="--rd:0.14s"><span class="ic" aria-hidden="true">&#9674;</span><div><b>RAG &amp; AI AGENTS</b><p>FastAPI, LangChain, ChromaDB, Python.</p></div></li>
+<li class="rv" style="--rd:0.21s"><span class="ic" aria-hidden="true">&lt;/&gt;</span><div><b>WEB &amp; PROGRAMMING</b><p>C, Java, Python, HTML, CSS, JavaScript, React.</p></div></li></ul></div>
 <div class="int"><h2 class="serif">INTERNSHIPS</h2>
-<ol><li><b>01</b><span>Artificial Intelligence and Machine Learning</span></li><li><b>02</b><span>Cybersecurity and Ethical Hacking</span></li></ol>
+<ol><li class="rv il"><b>01</b><span>Artificial Intelligence and Machine Learning</span></li><li class="rv il" style="--rd:.08s"><b>02</b><span>Cybersecurity and Ethical Hacking</span></li></ol>
 </div>
 </section>
 
-<section class="dark quote" id="pf-about"><div><p class="ital2">About</p><p class="big">Interested in programming, software development, web technologies, AI, machine learning and cybersecurity.</p></div><div class="qm" aria-hidden="true">&ldquo;</div></section>
+<section class="dark quote" id="pf-about"><div class="rv"><p class="ital2">About</p><p class="big">Interested in programming, software development, web technologies, AI, machine learning and cybersecurity.</p></div><div class="qm rv" style="--rd:.15s" aria-hidden="true">&ldquo;</div></section>
 
-<section class="cta" id="pf-connect"><h2 class="serif">LET'S CONNECT</h2>
-<p class="b">Interested in my projects or want to talk about them?</p><div class="btns"><a class="btn" rel="noopener" href="https://github.com/laya-khathoon">GITHUB &rarr;</a><a class="btn" rel="noopener" href="https://www.linkedin.com/in/laya-khathoon-v-763189387">LINKEDIN &rarr;</a></div>
+<section class="cta" id="pf-connect"><h2 class="serif rv">LET'S CONNECT</h2>
+<p class="b rv" style="--rd:.1s">Interested in my projects or want to talk about them?</p><div class="btns rv" style="--rd:.2s"><a class="btn" rel="noopener" href="https://github.com/laya-khathoon">GITHUB &rarr;</a><a class="btn" rel="noopener" href="https://www.linkedin.com/in/laya-khathoon-v-763189387">LINKEDIN &rarr;</a></div>
 </section>
 </main>
 <footer class="foot dark"><div class="mono" aria-hidden="true">L</div><span>BUILDING, LEARNING, SHIPPING.</span><span>&copy; 2026 LAYA KHATHOON</span></footer>
 </div>
-</div></body></html>
+</div><script>
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -60px 0px',threshold:.08});
+els.forEach(function(e){io.observe(e)})})();
+</script></body></html>
