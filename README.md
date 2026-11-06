@@ -27,6 +27,7 @@ Selected work:
 The page also lists Deepfake Audio Detection, Pharmacy Management System, MindScribe (in development), AgentForge and Student Performance Analysis.
 
 Live demo: [Student Performance Analysis](https://laya-student-performance.streamlit.app/).
+Live demo: [Customer Churn Prediction](https://customer-churn-prediction-q5kxzl9kzqgf6putmyc6yt.streamlit.app/).
 
 The project visuals are decorative illustrations, not application screenshots. The portrait area is reserved for a personal photo.
 
