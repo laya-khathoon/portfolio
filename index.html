@@ -101,6 +101,25 @@ body{background:var(--page-tone,#f3ebe3)}
 }
 /* Reveal on keyboard focus too; hidden content must never trap focus. */
 .js .rv:focus-within{opacity:1;transform:none}
+
+/* Quiet hover and keyboard-focus details; touch devices stay still. */
+.pf .role a{position:relative;text-decoration:none}
+.pf .role a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.pf .role a:hover::after,.pf .role a:focus-visible::after{transform:scaleX(1)}
+.pf .wc:focus-within{border-color:var(--gold)}
+.pf .wc a:hover{letter-spacing:.15em;text-decoration:underline;text-underline-offset:5px}
+.pf .btn{transition:background-color .25s,color .25s,box-shadow .25s,transform .25s}
+.pf .btn:focus-visible{background:var(--ink);color:var(--cream)}
+.mq:hover .mq-track,.mq:focus-within .mq-track{animation-play-state:paused}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+.pf .wc.in:hover{transform:translateY(-6px);box-shadow:0 12px 24px #0002;background:#ffffff05}
+.pf .btn:hover{transform:translateY(-2px);box-shadow:3px 3px 0 var(--tan)}
+.pf .hero .rule i{transition:transform .6s cubic-bezier(.22,1,.36,1)}.pf .hero:hover .rule i{transform:rotate(90deg)}
+}
+@media(prefers-reduced-motion:reduce){
+.pf *, .pf *::before,.pf *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.pf .wc:hover,.pf .il:hover,.pf .btn:hover{transform:none}
+}
 </style></head><body><div class="pf"><div class="wrap">
 <header class="top"><div class="mono" aria-hidden="true">L</div><span class="nm">LAYA KHATHOON</span><nav class="role" aria-label="Sections"><a href="#pf-work">WORK</a><a href="#pf-skills">EXPERTISE</a><a href="#pf-about">ABOUT</a><a href="#pf-connect">CONNECT</a></nav></header>
 <main>
