@@ -82,6 +82,11 @@ html{scroll-behavior:smooth}
 .js .rv{opacity:1;transform:none;transition:none}
 .mq-track{animation:none}
 .wc,.il,.btn,.wc a{transition:none}}
+
+/* Scroll palette: keep text contrast steady while surfaces change. */
+body{background:var(--page-tone,#f3ebe3)}
+.pf{--cream:var(--page-tone,#f3ebe3);--tan:var(--accent-tone,#c9b5a3);--dk:var(--dark-tone,#242321)}
+@media(prefers-reduced-motion:reduce){body{background:#f3ebe3}.pf{--cream:#f3ebe3;--tan:#c9b5a3;--dk:#242321}}
 </style></head><body><div class="pf"><div class="wrap">
 <header class="top"><div class="mono" aria-hidden="true">L</div><span class="nm">LAYA KHATHOON</span><nav class="role" aria-label="Sections"><a href="#pf-work">WORK</a><a href="#pf-skills">EXPERTISE</a><a href="#pf-about">ABOUT</a><a href="#pf-connect">CONNECT</a></nav></header>
 <main>
@@ -132,4 +137,28 @@ html{scroll-behavior:smooth}
 if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -60px 0px',threshold:.08});
 els.forEach(function(e){io.observe(e)})})();
+
+/* One passive listener, one animation frame, no animation library. */
+(function(){
+var motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+var root=document.documentElement, queued=false;
+var stops=[
+  {id:null,paper:[243,235,227],accent:[201,181,163],dark:[36,35,33]},
+  {id:'pf-work',paper:[232,237,227],accent:[164,182,158],dark:[32,40,36]},
+  {id:'pf-skills',paper:[239,228,217],accent:[199,163,140],dark:[44,35,32]},
+  {id:'pf-connect',paper:[243,235,227],accent:[201,181,163],dark:[36,35,33]}
+];
+function paint(){
+  queued=false;
+  if(motion.matches){['--page-tone','--accent-tone','--dark-tone'].forEach(function(k){root.style.removeProperty(k)});return}
+  var y=window.scrollY, max=document.documentElement.scrollHeight-window.innerHeight;
+  var points=stops.map(function(s){return s.id?Math.max(0,Math.min(max,document.getElementById(s.id).getBoundingClientRect().top+y-window.innerHeight*.25)):0});
+  var i=0;while(i<stops.length-2&&y>=points[i+1])i++;
+  var t=Math.max(0,Math.min(1,(y-points[i])/Math.max(1,points[i+1]-points[i])));t=t*t*(3-2*t);
+  ['paper','accent','dark'].forEach(function(key,j){var a=stops[i][key],b=stops[i+1][key];root.style.setProperty(['--page-tone','--accent-tone','--dark-tone'][j],'rgb('+a.map(function(v,k){return Math.round(v+(b[k]-v)*t)}).join(',')+')')});
+}
+function schedule(){if(!queued){queued=true;requestAnimationFrame(paint)}}
+window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);
+motion.addEventListener('change',schedule);paint();
+})();
 </script></body></html>
