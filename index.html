@@ -87,6 +87,20 @@ html{scroll-behavior:smooth}
 body{background:var(--page-tone,#f3ebe3)}
 .pf{--cream:var(--page-tone,#f3ebe3);--tan:var(--accent-tone,#c9b5a3);--dk:var(--dark-tone,#242321)}
 @media(prefers-reduced-motion:reduce){body{background:#f3ebe3}.pf{--cream:#f3ebe3;--tan:#c9b5a3;--dk:#242321}}
+
+/* Once-per-visit illustration reveals, using the existing observer. */
+@keyframes bar-grow{from{transform:scaleY(.08)}to{transform:scaleY(1)}}
+@keyframes bubble-in{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+@keyframes node-in{from{opacity:.1;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){
+.js .wc.in .a1 b{transform-origin:bottom;animation:bar-grow .7s cubic-bezier(.22,1,.36,1) both}
+.js .wc.in .a1 b:nth-child(2){animation-delay:.08s}.js .wc.in .a1 b:nth-child(3){animation-delay:.16s}.js .wc.in .a1 b:nth-child(4){animation-delay:.24s}.js .wc.in .a1 b:nth-child(5){animation-delay:.32s}.js .wc.in .a1 b:nth-child(6){animation-delay:.4s}
+.js .wc.in .a2 u{animation:bubble-in .65s ease both}.js .wc.in .a2 u:nth-child(2){animation-delay:.18s}.js .wc.in .a2 u:nth-child(3){animation-delay:.36s}
+.js .wc.in .a3 s{animation:node-in .65s ease both}.js .wc.in .a3 s:nth-child(2){animation-delay:.1s}.js .wc.in .a3 s:nth-child(3){animation-delay:.2s}.js .wc.in .a3 s:nth-child(4){animation-delay:.3s}
+.js .sh hr{transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.22,1,.36,1) .18s}.js .sh.in hr{transform:scaleX(1)}
+}
+/* Reveal on keyboard focus too; hidden content must never trap focus. */
+.js .rv:focus-within{opacity:1;transform:none}
 </style></head><body><div class="pf"><div class="wrap">
 <header class="top"><div class="mono" aria-hidden="true">L</div><span class="nm">LAYA KHATHOON</span><nav class="role" aria-label="Sections"><a href="#pf-work">WORK</a><a href="#pf-skills">EXPERTISE</a><a href="#pf-about">ABOUT</a><a href="#pf-connect">CONNECT</a></nav></header>
 <main>
