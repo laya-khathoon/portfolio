@@ -120,7 +120,17 @@ body{background:var(--page-tone,#f3ebe3)}
 .pf *, .pf *::before,.pf *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .pf .wc:hover,.pf .il:hover,.pf .btn:hover{transform:none}
 }
-</style></head><body><div class="pf"><div class="wrap">
+
+/* === Nov 12: smooth loader, 3D card tilt, hero parallax === */
+.loader{position:fixed;inset:0;z-index:60;background:var(--dk,#242321);color:#efe6dc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;animation:loader-out .5s ease .9s forwards}
+.loader .mono{width:52px;height:52px;border-color:#efe6dc;font-size:24px;animation:loader-pop .5s cubic-bezier(.22,1,.36,1) both}
+.loader span{letter-spacing:.32em;font-size:11px;padding-left:.32em;animation:loader-pop .5s cubic-bezier(.22,1,.36,1) .12s both}
+@keyframes loader-pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes loader-out{to{opacity:0;visibility:hidden}}
+.cards3{perspective:1000px}
+.js .rv.in.wc.tilt{transition:transform .12s ease-out,border-color .35s,box-shadow .25s}
+@media(prefers-reduced-motion:reduce){.loader{display:none}}
+</style></head><body><div class="pf"><div class="loader" aria-hidden="true"><div class="mono">L</div><span>LAYA KHATHOON</span></div><div class="wrap">
 <header class="top"><div class="mono" aria-hidden="true">L</div><span class="nm">LAYA KHATHOON</span><nav class="role" aria-label="Sections"><a href="#pf-work">WORK</a><a href="#pf-skills">EXPERTISE</a><a href="#pf-about">ABOUT</a><a href="#pf-connect">CONNECT</a></nav></header>
 <main>
 <section class="hero">
@@ -193,5 +203,35 @@ function paint(){
 function schedule(){if(!queued){queued=true;requestAnimationFrame(paint)}}
 window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);
 motion.addEventListener('change',schedule);paint();
+})();
+
+/* 3D tilt on project cards - pointer devices only, respects reduced motion. */
+(function(){
+var motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+var fine=window.matchMedia('(hover: hover) and (pointer: fine)');
+if(fine.matches){
+  document.querySelectorAll('.wc').forEach(function(card){
+    card.classList.add('tilt');
+    card.addEventListener('pointermove',function(e){
+      if(motion.matches){card.style.transform='';return}
+      var r=card.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform='translateY(-6px) rotateX('+(-y*5).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)';
+    });
+    card.addEventListener('pointerleave',function(){card.style.transform=''});
+  });
+}
+/* Gentle parallax on the hero portrait column. */
+var portrait=document.querySelector('.portrait'), queued=false;
+function par(){
+  queued=false;
+  if(!portrait)return;
+  if(motion.matches){portrait.style.transform='';return}
+  var y=window.scrollY;
+  portrait.style.transform=y<window.innerHeight?('translateY('+(y*0.12).toFixed(1)+'px)'):'';
+}
+function sched(){if(!queued){queued=true;requestAnimationFrame(par)}}
+window.addEventListener('scroll',sched,{passive:true});
+motion.addEventListener('change',sched);par();
 })();
 </script></body></html>
