@@ -6,30 +6,31 @@ My personal portfolio as a Computer Science student, sharing the machine learnin
 
 ## Overview
 
-The current portfolio is a single scrolling page with a cream-and-dark colour palette, large typography and navigation links to Work, Expertise, About and Connect.
+The current portfolio is a single scrolling page with a cream-and-dark colour palette, large typography and navigation links to Work, Hackathons, Learning, Expertise, About and Connect.
 
 ### Features
 
 - Project cards with descriptions and links to source code.
-- Skills and internship sections.
+- Skills, dated internships, hackathon participation and learning milestones.
 - Responsive layouts for smaller screens.
 - Staged intro animations, scroll-reveal effects, a scrolling skills strip and hover effects.
 - Reduced-motion support and visible keyboard-focus styles.
 - Direct links to GitHub and LinkedIn.
 
-## Projects featured
+## Projects and milestones
 
-Selected work:
-- Customer Churn Prediction
-- RAG Documentation Chatbot (in progress)
-- Neural Network from Scratch
+The homepage separates deployed apps from in-progress builds:
 
-The page also lists Deepfake Audio Detection, Pharmacy Management System, MindScribe (in development), AgentForge and Student Performance Analysis.
+- FirstJob Agent, PageSage, Customer Churn Prediction and Neural Network Studio have app and code links.
+- Layalabs Forge Agent is an in-progress Forge-a-thon entry, not a completed submission.
+- AgentForge is a separate local Python/Ollama prototype.
+- Student Performance Analysis, MindScribe, the planned deepfake-audio work and Pharmacy Management System are listed under More Projects.
 
-Live demo: [Student Performance Analysis](https://laya-student-performance.streamlit.app/).
-Live demo: [Customer Churn Prediction](https://customer-churn-prediction-q5kxzl9kzqgf6putmyc6yt.streamlit.app/).
+Hackathons have their own section: Code for a Billion (submitted), Forge-a-thon (in progress), and KANZ AI Training Hackathon II (upcoming, seat confirmed for January 2027).
 
-The project visuals are decorative illustrations, not application screenshots. The portrait area is reserved for a personal photo.
+Learning separates the completed One Million Prompters course from enrollment in YUVA AI for All and the Walmart Advanced Software Engineering simulation on Forage. A simulation is not employment.
+
+The project visuals are decorative illustrations, not application screenshots. The portrait area is reserved for a personal photo. Free-hosted demos may sleep between visits.
 
 ## Built with
 
