@@ -25,11 +25,12 @@ The homepage separates deployed apps from in-progress builds:
 - FirstJob Agent, PageSage, Customer Churn Prediction and Neural Network Studio have app and code links.
 - Layalabs Forge Agent is an in-progress Forge-a-thon entry, not a completed submission.
 - AgentForge is a separate local Python/Ollama prototype.
-- Student Performance Analysis, MindScribe, the planned deepfake-audio work and Pharmacy Management System are listed under More Projects.
+- Student Performance Analysis, MindScribe and the planned deepfake-audio work are listed under More Projects.
+- Pharmacy Management System is a live Flask + MySQL group project (Vercel + TiDB Cloud) with app and code links.
 
-Hackathons have their own section: Code for a Billion (submitted), Forge-a-thon (in progress), and KANZ AI Training Hackathon II (upcoming, seat confirmed for January 2027).
+Hackathons have their own section: Code for a Billion (submitted), Forge-a-thon (Round 1 submitted, shortlist expected 30 November 2026), FOSSEE Winter Internship eSim screening task (submitted, results expected 28 November 2026), and KANZ AI Training Hackathon II (upcoming, seat confirmed for January 2027).
 
-Learning separates the completed One Million Prompters course from enrollment in YUVA AI for All and the Walmart Advanced Software Engineering simulation on Forage. A simulation is not employment.
+Learning separates the completed One Million Prompters course and the completed Walmart Advanced Software Engineering simulation on Forage from enrollment in YUVA AI for All. A simulation is not employment.
 
 FirstJob Agent, PageSage and Customer Churn Prediction use cropped screenshots of their live app interfaces, captured without personal data. The two local agent projects use clearly labelled text panels rather than simulated screenshots. The portrait area is reserved for a personal photo. Free-hosted demos may sleep between visits.
 
