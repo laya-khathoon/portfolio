@@ -30,8 +30,8 @@ section{padding:96px 0}.alt{background:var(--bg2)}
 h2{font-size:clamp(34px,4.6vw,56px);margin-bottom:16px;letter-spacing:.005em}h2 em{font-style:normal;color:var(--tan)}
 .lead{color:var(--mut);max-width:640px;margin:0 0 44px;font-weight:400;font-size:15px}
 /* hero */
-.hero{position:relative;padding:84px 0 0;background:radial-gradient(900px 500px at 78% 30%,#3a2013 0%,transparent 70%),var(--bg)}
-.hero .w.top{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}
+.hero{position:relative;padding:40px 0 0;background:radial-gradient(900px 500px at 78% 30%,#3a2013 0%,transparent 70%),var(--bg)}
+.hero .w.top{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:end}
 h1{font-size:clamp(56px,9vw,128px);letter-spacing:-.01em;line-height:.95;margin:6px 0 26px}
 h1 em{font-style:normal;color:var(--tan);display:block}
 .role{font:400 clamp(18px,2vw,22px)/1.5 Montserrat,sans-serif;margin:0 0 10px}
@@ -41,8 +41,8 @@ h1 em{font-style:normal;color:var(--tan);display:block}
 .btn.pri{background:var(--tan);color:#1a0f08}.btn:hover{background:var(--tan);color:#1a0f08}.btn.pri:hover{background:#d9b793}
 .btn i,.lnk i{font-style:normal;display:inline-block;transition:transform .25s}.btn:hover i,.lnk:hover i{transform:translate(2px,-2px)}
 .note{font-size:11px;color:var(--mut);margin:14px 0 0;letter-spacing:.06em}
-.avatar{position:relative;aspect-ratio:4/5;max-width:360px;margin-left:auto;width:100%;border:1px solid var(--tan);padding:14px}
-.avatar div{width:100%;height:100%;background:linear-gradient(170deg,#2a170d,#140b07);display:grid;place-items:center;position:relative;overflow:hidden}
+.avatar{position:relative;aspect-ratio:4/5;max-width:500px;margin-left:auto;width:100%;border:0;padding:0}
+.avatar div{width:100%;height:100%;background:radial-gradient(70% 55% at 50% 40%,#4a2815,transparent 75%),linear-gradient(180deg,#1b0f09,#0a0706);display:grid;place-items:center;position:relative;overflow:hidden;}.avatar div::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(transparent,var(--bg));z-index:1}.avatar .tagline,.avatar small{z-index:2}
 .avatar span{font:italic 500 clamp(110px,13vw,170px) "Cormorant Garamond",serif;color:var(--tan);line-height:1}
 .avatar small{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:var(--mut);font-size:10px;letter-spacing:.22em}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-top:1px solid var(--line)}
@@ -85,6 +85,7 @@ h1 em{font-style:normal;color:var(--tan);display:block}
 .cta{text-align:center;border:1px solid var(--line);padding:76px 24px;background:radial-gradient(500px 260px at 50% 0%,#2e190e,transparent 70%),var(--card)}
 .cta h2{font-size:clamp(38px,6vw,72px)}.cta p{color:var(--mut);margin:0 0 32px;font-size:15px}.cta .btns{justify-content:center}
 footer{padding:30px 0 44px;color:var(--mut);font-size:12px;letter-spacing:.08em;border-top:1px solid var(--line)}footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0 0 26px}.chips li{border:1px solid var(--line);background:#ffffff08;border-radius:99px;padding:7px 16px;font-size:12.5px}.avatar .tagline{position:absolute;left:0;right:0;bottom:46px;text-align:center;font:500 clamp(52px,6vw,84px)/1 "Cormorant Garamond",serif;color:var(--tx);letter-spacing:-.01em}.avatar .tagline i{color:var(--tan)}
 /* motion */
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease var(--d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--d,0s),border-color .35s,box-shadow .35s}
 .js .rv.in{opacity:1;transform:none}.js .card.rv.in:hover{transform:translateY(-6px)}
@@ -104,7 +105,18 @@ footer{padding:30px 0 44px;color:var(--mut);font-size:12px;letter-spacing:.08em;
 .menu.open{display:flex}.menu a{padding:16px 0;font-size:13px;border-bottom:1px solid var(--line)}
 .grid,.more{grid-template-columns:1fr}.mini,.mini:nth-child(even){padding:22px 0;border-left:0}
 .ev{grid-template-columns:1fr;gap:6px;padding:26px 0}.ev h3{font-size:28px}
-.btn{flex:1;justify-content:center;padding:15px 16px}.facts{margin-top:52px}.fact{padding:22px 12px 24px 0}.fact+.fact{padding-left:18px}.cta{padding:52px 20px}.shot{height:190px}.menu a::after{display:none}}
+.btn{flex:1;justify-content:center;padding:15px 16px}.facts{margin-top:52px}.fact{padding:22px 12px 24px 0}.fact+.fact{padding-left:18px}.cta{padding:52px 20px}.shot{height:190px}.menu a::after{display:none}
+.hero .w.top>div:first-child{display:contents}
+.hero .w.top{gap:0;justify-items:center;text-align:center}
+.hero .eyebrow{order:1;margin:0 0 10px}.hero h1{order:2;font-size:clamp(54px,17vw,78px);margin:0 0 18px}.hero h1 em{display:inline}
+.chips{order:3;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:26px!important}
+
+.hero .w.top .avatar{order:4;width:calc(100% + 40px);max-width:none;margin:-6px -20px 8px;aspect-ratio:3/4;padding:0;border:0}
+.avatar span{font-size:150px}
+.avatar .tagline{font-size:clamp(54px,18vw,84px)}
+.avatar small{bottom:16px}
+.hero .role{order:5}.hero .sub{order:6}.hero .btns{order:7;width:100%}.hero .note{order:8}
+}
 </style></head><body>
 <div class="prog" id="pg" aria-hidden="true"></div><nav class="bar"><div class="w"><a class="logo" href="#top"><b>L</b>Laya Khathoon</a>
 <button class="burger" aria-label="Menu" aria-expanded="false" id="bg">&#9776;</button>
@@ -113,11 +125,12 @@ footer{padding:30px 0 44px;color:var(--mut);font-size:12px;letter-spacing:.08em;
 <header class="hero"><div class="w top"><div>
 <p class="eyebrow">B.Tech CSE &middot; Open to internships</p>
 <h1>Laya <em>Khathoon</em></h1>
+<ul class="chips"><li>ML Engineer in the making</li><li>Builder</li><li>Student</li></ul>
 <p class="role">I build machine learning and AI projects from the ground up.</p>
 <p class="sub">Final-year B.Tech Computer Science student making practical ML apps, document Q&amp;A tools and local AI agents. Every project ships with a live demo.</p>
 <div class="btns"><a class="btn pri" href="#work">View projects</a><a class="btn" href="4-Laya-Khathoon-V-Resume.pdf" download="Laya-Khathoon-V-Resume.pdf">Download resume <i>&darr;</i></a></div>
 <p class="note">Resume PDF &middot; Updated November 2026</p></div>
-<div class="avatar" aria-hidden="true"><div><span>L</span><small>PHOTO COMING SOON</small></div></div></div>
+<div class="avatar" aria-hidden="true"><div><span>L</span><small>PHOTO COMING SOON</small><b class="tagline" aria-hidden="true">AI <i>&amp;</i> ML</b></div></div></div>
 <div class="w"><div class="facts">
 <div class="fact rv"><b>4</b><span>deployed apps</span></div><div class="fact rv" style="--d:.08s"><b>6</b><span>projects showcased</span></div><div class="fact rv" style="--d:.16s"><b>3</b><span>hackathons &amp; programs</span></div><div class="fact rv" style="--d:.24s"><b>2</b><span>internships</span></div></div></div>
 </header>
